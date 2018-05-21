@@ -198,10 +198,11 @@ and open the template in the editor.
             </svg>
 
             <form method="post" action="RegistroServlet">
-                <input id="name" name="name" placeholder="Nombre" type="text" required /><br/>
-                <input id="email" name="email" placeholder="Correo" type="email" required /><br/>
-                <textarea id="message" name="message" placeholder="Mensaje" required ></textarea>
+                <input id="name" name="name" placeholder="Nombre" type="text" maxlength="25" required /><br/>
+                <input id="email" name="email" placeholder="Correo" type="email" maxlength="10" required /><br/>
+                <textarea onkeyup="textCounter(this,'counter',300);" id="message" name="message" placeholder="Mensaje" maxlength="300" required ></textarea>
                 <input type="submit" value="ENVIAR" class="submit" />
+                <input disabled  maxlength="3" size="3" value=300 id="counter">
             </form>
         </div>
         <!-- Form section end -->
